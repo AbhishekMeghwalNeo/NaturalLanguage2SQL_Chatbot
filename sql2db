@@ -1,0 +1,14 @@
+import sqlite3
+
+conn = sqlite3.connect(r"data\mysqlsampledatabase.db")
+cursor = conn.cursor()
+
+with open(r"data\mysqlsampledatabase.db", "r", encoding="utf-8") as f:
+    sql = f.read()
+
+try:
+    cursor.executescript(sql)
+except Exception as e:
+    print("❌ SQLite error:", e)
+
+conn.close()

@@ -3,5 +3,5 @@ notebook
 openai
 python-dotenv
 streamlit
-
+# mysql2sqlite
 
